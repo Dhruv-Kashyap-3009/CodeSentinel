@@ -1,0 +1,1 @@
+Review Python for mutable default arguments, bare `except`, unsafe `eval` or `pickle`, resource leaks, incorrect exception handling, injection, unsafe deserialization, missing input validation, and incorrect assumptions about values and iterables. Report only actionable defects with source evidence.

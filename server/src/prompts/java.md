@@ -1,0 +1,1 @@
+Review Java for null pointer risks, unclosed streams or other resources, concurrency and visibility errors, equals/hashCode contract violations, swallowed exceptions, collection misuse, unsafe input handling, and boundary conditions. Report only actionable defects with source evidence.

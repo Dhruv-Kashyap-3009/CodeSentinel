@@ -1,0 +1,1 @@
+Review C for buffer overflows, use-after-free, memory leaks, null dereference, uninitialized variables, integer overflow, unsafe input handling, invalid pointer arithmetic, and incorrect ownership or lifetime assumptions. Report only actionable defects with source evidence.

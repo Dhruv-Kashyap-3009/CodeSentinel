@@ -1,0 +1,1 @@
+Review C++ for buffer overflows, use-after-free, memory leaks, null dereference, uninitialized variables, integer overflow, ownership and lifetime errors, misuse of references or iterators, unsafe casts, and exception-safety problems. Report only actionable defects with source evidence.

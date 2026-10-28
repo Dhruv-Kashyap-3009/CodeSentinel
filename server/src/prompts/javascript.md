@@ -1,0 +1,1 @@
+Review JavaScript and JSX for missing `await`, unhandled promise rejections, `==` versus `===` when coercion is unsafe, undefined/null property access, prototype pollution, injection into HTML or dynamic code, unsafe URL handling, async error propagation, and invalid assumptions about browser or Node APIs. Report only actionable defects with source evidence.

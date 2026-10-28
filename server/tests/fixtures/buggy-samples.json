@@ -1,0 +1,10 @@
+{
+  "javascript": "function greet(user) { return user.profile.name; }\nfetch('/data').then(response => response.json());",
+  "java": "import java.io.*; class A { String read(File file) throws Exception { return new FileReader(file).toString(); } }",
+  "python": "def average(values=[]):\n    values.append(1)\n    return sum(values) / len(values)\n",
+  "c": "#include <stdio.h>\nint main(void) { char name[4]; gets(name); return 0; }",
+  "cpp": "#include <cstring>\nint main() { char* name = new char[4]; std::strcpy(name, \"long string\"); return 0; }",
+  "html": "<div id=\"x\"></div><script>x.innerHTML = location.hash;</script>",
+  "css": "button { outline: none; width: 900px; }",
+  "sql": "SELECT * FROM users WHERE name = '" + "' + userInput + '" + "';"
+}

@@ -1,0 +1,1 @@
+Review SQL for injection, unsafe string concatenation, incorrect joins, NULL handling mistakes, unintended destructive queries, transaction errors, missing constraints, and incorrect assumptions about cardinality. Report only actionable defects with source evidence.

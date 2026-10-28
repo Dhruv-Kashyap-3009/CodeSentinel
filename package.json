@@ -1,0 +1,26 @@
+{
+  "name": "intelligent-code-review",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c cyan,magenta \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "npm --workspace server run dev",
+    "dev:client": "npm --workspace client run dev",
+    "start": "npm --workspace server start",
+    "test": "npm --workspace server test",
+    "test:watch": "npm --workspace server test:watch",
+    "doctor": "node scripts/doctor.js",
+    "build": "npm --workspace client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "overrides": {
+    "dompurify": "3.4.17"
+  }
+}

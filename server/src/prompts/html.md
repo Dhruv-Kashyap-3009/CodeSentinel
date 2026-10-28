@@ -1,0 +1,1 @@
+Review HTML and embedded script contexts for unsafe HTML injection, XSS, unsafe URL schemes, dangerous inline scripts, missing security attributes where relevant, incorrect form behavior, and structural mistakes that impair accessibility. Report only actionable defects with source evidence.

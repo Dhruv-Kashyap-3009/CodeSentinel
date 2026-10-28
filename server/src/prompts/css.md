@@ -1,0 +1,1 @@
+Review CSS for invalid or ineffective selectors, styles that harm keyboard or visual accessibility, responsive layout failures, unexpected specificity interactions, expensive selectors or animations, and layout rules that cause clipping or overflow. Report only actionable defects with source evidence.

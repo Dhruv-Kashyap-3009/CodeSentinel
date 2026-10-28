@@ -1,0 +1,20 @@
+import express from 'express';
+import cors from 'cors';
+import { config } from './config/env.js';
+import health from './routes/health.js';
+import review from './routes/review.js';
+import reviews from './routes/reviews.js';
+import stats from './routes/stats.js';
+import { notFound } from './middleware/notFound.js';
+import { errorHandler } from './middleware/errorHandler.js';
+
+export const app = express();
+app.disable('x-powered-by');
+app.use(cors({ origin: config.frontendOrigin }));
+app.use(express.json({ limit: '200kb' }));
+app.use('/health', health);
+app.use('/api/review', review);
+app.use('/api/reviews', reviews);
+app.use('/api/stats', stats);
+app.use(notFound);
+app.use(errorHandler);

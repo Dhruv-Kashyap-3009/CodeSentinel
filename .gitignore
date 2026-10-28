@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+client/dist/
+coverage/
+*.log
+*.tmp
+*.swp
+.DS_Store
+.vite/
+server/.cache/

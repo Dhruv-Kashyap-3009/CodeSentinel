@@ -1,0 +1,36 @@
+.review-workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, .89fr); min-height: 535px; height: min(63vh, 720px); max-height: 780px; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow-panel); overflow: hidden; }
+.editor-panel { display: flex; min-width: 0; min-height: 0; flex-direction: column; border-right: 1px solid var(--border); }
+.editor-toolbar { display: flex; min-height: 61px; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 11px 8px 15px; border-bottom: 1px solid var(--border-subtle); background: var(--surface); }
+.toolbar-controls, .toolbar-actions { display: flex; align-items: center; gap: 13px; }
+.toolbar-controls { min-width: 0; }
+.control-group { display: grid; gap: 5px; }
+.control-group > span { color: var(--text-faint); font: 8px var(--font-mono); letter-spacing: .7px; white-space: nowrap; }
+.control-group select { max-width: 128px; height: 23px; padding: 0 15px 0 0; border: 0; outline: none; background-color: transparent; color: var(--text-secondary); font-size: 11px; font-weight: 600; cursor: pointer; }
+.control-group select:focus-visible { outline: 1px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+.control-group option { background: var(--surface-raised); color: var(--text); }
+.filename-control { min-width: 112px; }
+.filename-control small { color: var(--text-faint); font: 8px var(--font-body); letter-spacing: 0; }
+.filename-input { display: flex; align-items: center; gap: 6px; color: var(--text-faint); }
+.filename-input input { width: 105px; padding: 0; border: 0; outline: none; background: transparent; color: var(--text-secondary); font: 10px var(--font-mono); }
+.filename-input input::placeholder { color: var(--text-faint); }
+.toolbar-actions { justify-content: flex-end; gap: 3px; }
+.toolbar-actions .quiet-button { min-height: 31px; padding: 0 7px; font-size: 11px; }
+.toolbar-divider { width: 1px; height: 21px; margin: 0 6px; background: var(--border); }
+.toolbar-actions .review-button { min-height: 33px; font-size: 11px; }
+.review-button.cancel-button { border-color: color-mix(in srgb, var(--high) 32%, var(--border)); background: var(--high-wash); color: var(--high); }
+.monaco-wrap { min-height: 0; flex: 1; padding: 0; background: var(--surface); }
+.monaco-wrap > section { min-height: 100%; }
+.editor-status { display: flex; min-height: 28px; align-items: center; justify-content: space-between; padding: 0 12px; border-top: 1px solid var(--border-subtle); background: var(--surface-deep); color: var(--text-faint); font: 8px var(--font-mono); letter-spacing: .45px; }
+.editor-status > span { display: inline-flex; align-items: center; gap: 7px; }
+.editor-status .status-light { width: 5px; height: 5px; }
+.status-dot-sep { margin: 0 1px; color: var(--border); }
+.review-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 11px; color: var(--text-faint); font-size: 10px; }
+.review-footer > span { display: flex; align-items: center; gap: 6px; }
+.review-footer > span:first-child svg { color: var(--accent); }
+.shortcut-caption { font: 9px var(--font-mono); }
+.shortcut-caption svg { opacity: .7; }
+/* Narrow editor columns cannot hold every control on one line, so the toolbar wraps instead of overlapping. */
+@media (max-width: 1180px) { .editor-toolbar { flex-wrap: wrap; row-gap: 8px; } .toolbar-controls { flex: 1 1 auto; flex-wrap: wrap; row-gap: 6px; } .toolbar-actions { margin-left: auto; } }
+@media (max-width: 1000px) { .review-workspace { grid-template-columns: minmax(0, 1fr) minmax(310px, .94fr); } .editor-toolbar { padding-left: 11px; } .filename-control { min-width: 100px; } .filename-input input { width: 87px; } .toolbar-controls, .toolbar-actions { gap: 7px; } .toolbar-actions .quiet-button { gap: 5px; } }
+@media (max-width: 760px) { .review-workspace { grid-template-columns: minmax(0, 1fr); height: auto; max-height: none; overflow: visible; } .editor-panel { height: 410px; border-right: 0; border-bottom: 1px solid var(--border); border-radius: var(--radius-lg) var(--radius-lg) 0 0; overflow: hidden; } .editor-toolbar { min-height: 58px; } .monaco-wrap { flex: 1; } .workspace-labels { padding-bottom: 8px; } .review-footer { margin-top: 10px; } }
+@media (max-width: 520px) { .editor-panel { height: 380px; } .editor-toolbar { flex-wrap: wrap; padding: 7px 8px; } .toolbar-controls { flex: 1; justify-content: space-between; gap: 7px; } .filename-control { min-width: 82px; } .filename-input input { width: 75px; font-size: 9px; } .toolbar-actions { width: 100%; justify-content: flex-end; } .toolbar-actions > :first-child, .toolbar-actions > :nth-child(2) { margin-right: auto; } .toolbar-actions .quiet-button { padding: 0 8px; } .editor-status { font-size: 7px; } }
